@@ -1,0 +1,31 @@
+<div class="container pt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form [formGroup]="userInfo" (ngSubmit)="submitform()">
+                <div class="form-group">
+                  <label>Username</label>
+                  <input type="text" formControlName="userName" id="" class="form-control" placeholder="">
+                  <div *ngIf="userInfo.controls.userName.touched && userInfo.controls.userName.errors !=null" class="alert alert-danger">Username is required</div>
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" formControlName="userPass" id="" class="form-control" placeholder="">
+                  <div *ngIf="userInfo.controls.userPass.touched && userInfo.controls.userPass.errors !=null" class="alert alert-danger">Password Must be between 5 to 9 and first character is capital</div>
+                </div>
+                <div class="form-group">
+                  <label for="">Email</label>
+                  <input type="text" formControlName="userEmail" id="" class="form-control" placeholder="">
+                  <div *ngIf="userInfo.controls.userEmail.touched && userInfo.controls.userEmail.errors !=null" class="alert alert-danger">Please Enter Valid Email</div>
+                </div>
+                <div class="form-group">
+                  <label for="">Age</label>
+                  <input type="number" formControlName="userAge" id="" class="form-control" placeholder="">
+                  <div *ngIf="userInfo.controls.userAge.touched && userInfo.controls.userAge.errors !=null" class="alert alert-danger">Age Must be from 18 to 40</div>
+
+                </div>
+                <button type="submit" class="btn btn-info" [disabled]="userInfo.invalid">Send</button>
+            </form>
+        </div>
+    </div>
+
+</div>

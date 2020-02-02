@@ -1,0 +1,41 @@
+.similar-movies{
+    border-top:2px solid #FFF;
+}
+.similar-movies h3{
+position: relative;
+}
+.similar-movies h3::after{
+    content: "";
+    position: absolute;
+    width: 94px;
+    height: 2px;
+    background-color: #FFF;
+    top: 52px;
+    left: 0;
+
+}
+.similar-movie{
+    position: relative;
+    overflow: hidden;
+}
+.similar-movie a{
+    color: black !important;
+}
+.similar-movie img{
+    width: 100%;
+    display: block;
+}
+.similar-movie .movie-overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: rgba(255,255,255,.7);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.similar-movie:hover .movie-overlay{
+    top: 0%;
+    transition: all 1s;
+}

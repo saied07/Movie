@@ -1,0 +1,75 @@
+#header-side{
+    background-color: #fff;
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+   /* left: 250px;*/
+   left: 0;
+    text-align: center;
+   transition: height 1s;
+}
+#header-side .img-header{
+    padding: 25px 0;
+}
+.img-header img{
+    height: 50px;
+}
+#header-side .menu-toggle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    cursor: pointer;
+}
+.menu-toggle .fa-times{
+    display: none;
+}
+#header-side .icons{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    right: 50%;
+}
+#sidemenu{
+    background-color: #000;
+    width: 250px;
+    height: 100vh;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    text-align: center;
+}
+#sidemenu ul{
+    padding: 0;
+}
+ul li{
+    list-style-type: none;
+    padding-top: 200px;
+    opacity: 0;
+}
+ul li a{
+    color: #fff;
+}
+ul li a:hover{
+    color: #ff655c;
+    text-decoration: none;
+    transition: all .3s;
+}
+#sidemenu .socials{
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+.socials i{
+    padding: 10px;
+    cursor: pointer;
+}
+.socials i:hover{
+    color: #ff655c;
+    text-decoration: none;
+}
+.hide{
+    display: none;
+}

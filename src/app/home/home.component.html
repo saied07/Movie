@@ -1,0 +1,41 @@
+<section class="mov-section">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="search-movie">
+                    <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="search..." />
+                </div>
+            </div>
+        </div>
+        <div class="row" >
+         
+            <div *ngFor="let m of pageOfItems|search:searchText" class="col-md-4 pt-4">
+                <div class="movies">
+                    <a [routerLink]="['/movie', m.id]">
+                    <div class="img-movie">
+                    <img class="img-fluid" src="https://image.tmdb.org/t/p/w500{{m.poster_path}}"/>
+                    </div>
+                    <div class="movie-overlay d-flex align-items-center justify-content-center">
+                    <div class="movie-info">
+                    <h2>{{m.title}}</h2>
+                    <p>{{m.overview}}</p>
+                    <p>rate:{{m.vote_average}}</p>
+                    <p>{{m.release_date}}</p>
+                    </div>
+    
+                    </div>
+                </a>
+                </div>
+             </div>
+        </div>
+    </div>
+   <div class="w-50 mx-auto my-5 py-5">
+       <div class="d-flex">
+           <!-- <i (click)="prev()" class="fas fa-arrow-alt-circle-left text-white fa-2x "></i>
+        <div  class="paginate p-3 text-white" *ngFor="let pagenum of pageNumber;let i=index " (click)="changePage(pagenum)">{{pagenum}}</div>
+        <i (click)="next()" class="fas fa-arrow-alt-circle-right text-white fa-2x "></i> -->
+        <jw-pagination [pageSize]="8" [items]="movies"  (changePage)="onChangePage($event)"></jw-pagination>
+
+    </div>
+   </div>
+</section>
